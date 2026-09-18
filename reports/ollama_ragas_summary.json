@@ -1,0 +1,18 @@
+{
+  "evaluation_mode": "Local Ollama",
+  "llm_model": "llama3.2:3b",
+  "embedding_model": "nomic-embed-text",
+  "ragas_version": "0.3.9",
+  "questions_evaluated": 25,
+  "evaluated": 25,
+  "passed": 4,
+  "failed": 21,
+  "pass_rate": 16.0,
+  "avg_relevance": 0.484253863586817,
+  "avg_faithfulness": 0.43666666666666665,
+  "avg_precision": 0.8033333332928332,
+  "avg_context_recall": 1.0,
+  "avg_similarity": 0.7275870458645344,
+  "hallucination_rate": 68.0,
+  "status": "EVALUATED"
+}

@@ -1,0 +1,702 @@
+question,contexts,answer,ground_truth
+What allergy is documented?,"Document: Clinical Review Assistant — Knowledge Base
+
+Section: 5. Allergy and Medication-Safety Review
+
+Allergy review must use only documented allergy information.
+For each documented allergy, consider:
+
+- Allergen name
+- Documented reaction, if available
+- Date or history information, if available
+- Relationship to medications under review when explicitly documented
+The assistant must not infer an allergy or adverse reaction that is not documented.
+If a documented allergy creates a potential medication-safety concern, the case should be considered for pharmacist or clinician review according to the application's workflow.
+The assistant must not independently change, stop, start, or recommend a medication for a real patient.
+
+CLINICAL REPORT
+Report ID: CR-2026-001245
+Date of Visit: 15-Aug-2026
+PATIENT INFORMATION
+-------------------
+Name: John A. Smith
+Age: 58 years
+Sex: Male
+Medical Record Number: MRN-548921
+CHIEF COMPLAINT
+---------------
+Shortness of breath and intermittent chest discomfort for 2 weeks.
+HISTORY OF PRESENT ILLNESS
+--------------------------
+The patient is a 58-year-old male with a history of hypertension and type 2 diabetes mellitus. He reports progressive shortness of breath during exertion over the past two weeks. He also describes occasional mild substernal chest discomfort lasting 5-10 minutes, relieved by rest. No associated nausea, vomiting, or syncope. He denies recent fever, cough, or travel history.
+PAST MEDICAL HISTORY
+--------------------
+- Hypertension
+- Type 2 Diabetes Mellitus
+- Hyperlipidemia
+PAST SURGICAL HISTORY
+---------------------
+- Appendectomy (2002)
+CURRENT MEDICATIONS
+-------------------
+- Metformin 1000 mg orally twice daily
+- Lisinopril 20 mg orally once daily
+- Atorvastatin 40 mg orally once daily
+- Aspirin 81 mg orally once daily
+ALLERGIES
+----------
+- Penicillin (rash)
+SOCIAL HISTORY
+--------------
+- Former smoker, quit 5 years ago
+- Alcohol: occasional use
+- No illicit drug use
+FAMILY HISTORY
+--------------
+- Father: Myocardial infarction at age 62
+- Mother: Type 2 diabetes mellitus
+PHYSICAL EXAMINATION
+--------------------
+Vital Signs:
+Blood Pressure: 148/92 mmHg
+Heart Rate: 88 bpm
+Respiratory Rate: 18/min
+Temperature: 36.8°C
+Oxygen Saturation: 96% on room air
+General:
+Alert and oriented, no acute distress.
+Cardiovascular:
+Regular rate and rhythm. No murmurs, rubs, or gallops.
+Respiratory:
+Mild bibasilar crackles. No wheezing.
+Abdomen:
+Soft, non-tender, non-distended.
+Extremities:
+Mild bilateral ankle edema.
+LABORATORY RESULTS
+------------------
+Hemoglobin: 13.8 g/dL
+WBC: 7.4 x10^9/L
+Platelets: 245 x10^9/L
+Glucose: 168 mg/dL
+HbA1c: 7.8%
+LDL: 136 mg/dL
+Troponin I: 0.02 ng/mL
+DIAGNOSTIC STUDIES
+------------------
+ECG:
+Normal sinus rhythm.
+No acute ST-segment elevation.
+Chest X-Ray:
+Mild cardiomegaly.
+No focal pulmonary infiltrates.
+ASSESSMENT
+----------
+- Exertional dyspnea, likely multifactorial.
+- Hypertension, suboptimally controlled.
+- Type 2 diabetes mellitus with suboptimal glycemic control.
+- Hyperlipidemia.
+- Possible early congestive heart failure.
+PLAN
+----
+- Continue current medications.
+- Schedule echocardiogram.
+- Recommend low-sodium diet.
+- Follow-up with cardiology within 2 weeks.
+PHYSICIAN
+---------
+Dr. Emily Roberts, MD
+Internal Medicine
+END OF REPORT
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+For each medication, capture the following information when available:
+
+- Medication name
+- Dose
+- Route
+- Frequency
+- Indication
+- Start date
+- End date or intended duration
+- Medication adherence
+- Documented side effects
+- Documented allergies or adverse reactions
+- Relevant laboratory values
+- Documented drug-interaction concerns
+If any field is missing, identify the missing information rather than inventing a value.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 8. Clinical Review Summary
+
+Subsection: Documented Facts
+
+Information explicitly present in the supplied clinical context.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+Subsection: Medication Duration
+
+Report the documented duration or start/end dates when available.
+If duration is missing, state that the duration is not documented.
+Do not infer duration from unrelated information.","The documented allergy is to Penicillin, with a reaction noted as a rash.",A penicillin allergy with a rash reaction is documented.
+Can the assistant infer an allergy that is not documented?,"Document: Clinical Review Assistant — Knowledge Base
+
+Section: 5. Allergy and Medication-Safety Review
+
+Allergy review must use only documented allergy information.
+For each documented allergy, consider:
+
+- Allergen name
+- Documented reaction, if available
+- Date or history information, if available
+- Relationship to medications under review when explicitly documented
+The assistant must not infer an allergy or adverse reaction that is not documented.
+If a documented allergy creates a potential medication-safety concern, the case should be considered for pharmacist or clinician review according to the application's workflow.
+The assistant must not independently change, stop, start, or recommend a medication for a real patient.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 13. General Knowledge Questions
+
+Examples of questions that can be answered from this knowledge base:
+
+- What is the purpose of the Clinical Review Assistant?
+- What information is considered during clinical review?
+- What are the steps in the clinical review workflow?
+- What information should be captured during medication review?
+- What should happen when medication dose information is missing?
+- What should happen when medication duration is missing?
+- How should documented allergies be handled?
+- When may pharmacist review be appropriate?
+- What are the available clinical review dispositions?
+- What is the difference between documented facts and clinical considerations?
+- What should the assistant do when the supplied context is insufficient?
+- What information should not be inferred during clinical review?
+These questions test retrieval and generation without requiring patient-specific information.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 6. Missing Information
+
+Potentially important missing information includes:
+
+- Medication dose
+- Medication duration
+- Medication frequency
+- Medication route
+- Allergy reaction
+- Relevant laboratory result
+- Medication adherence
+- Diagnosis
+- Symptom information
+- Treatment history
+When required information is missing:
+
+- Clearly identify what information is missing.
+- Do not invent or estimate the missing value.
+- Explain why the missing information may affect the review when supported by the knowledge base.
+- Refer for additional human review when the workflow requires it.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 6. Missing Information
+
+Subsection: Insufficient Information Rule
+
+If the supplied context does not contain enough information to answer a question, the assistant must say:
+""I do not have enough information in the supplied context.""
+The assistant must not fill the gap using assumptions.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 9. Human Review and Escalation
+
+Additional human review may be appropriate when:
+
+- A medication-safety concern is documented.
+- A medication-allergy concern is documented.
+- Required medication information is missing.
+- Important clinical information is incomplete.
+- The knowledge base specifies a pharmacist-review condition.
+- The knowledge base specifies a clinician-review condition.
+- The case meets an urgent-review condition defined by the workflow.
+The assistant should clearly state when human review is required rather than implying that the assistant has completed the clinical decision.","No, the assistant must not infer an allergy or adverse reaction that is not documented.",No. Allergy review must use only documented allergy information; an undocumented allergy should not be inferred.
+Can the assistant independently stop a real patient medication?,"Document: Clinical Review Assistant — Knowledge Base
+
+Section: 5. Allergy and Medication-Safety Review
+
+Allergy review must use only documented allergy information.
+For each documented allergy, consider:
+
+- Allergen name
+- Documented reaction, if available
+- Date or history information, if available
+- Relationship to medications under review when explicitly documented
+The assistant must not infer an allergy or adverse reaction that is not documented.
+If a documented allergy creates a potential medication-safety concern, the case should be considered for pharmacist or clinician review according to the application's workflow.
+The assistant must not independently change, stop, start, or recommend a medication for a real patient.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 9. Human Review and Escalation
+
+Additional human review may be appropriate when:
+
+- A medication-safety concern is documented.
+- A medication-allergy concern is documented.
+- Required medication information is missing.
+- Important clinical information is incomplete.
+- The knowledge base specifies a pharmacist-review condition.
+- The knowledge base specifies a clinician-review condition.
+- The case meets an urgent-review condition defined by the workflow.
+The assistant should clearly state when human review is required rather than implying that the assistant has completed the clinical decision.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 10. Patient Information Protection
+
+Patient-specific information includes:
+
+- Patient name
+- Patient identifier
+- Date of birth
+- Contact information
+- Medications associated with an identifiable patient
+- Allergies associated with an identifiable patient
+- Diagnoses
+- Symptoms
+- Laboratory results
+- Vital signs
+- Treatment history
+- Other identifiable clinical information
+General questions about the clinical-review workflow, medication-review process, review dispositions, and knowledge-base rules may be answered using this knowledge base.
+Patient-specific requests must be evaluated by the application's patient-information guardrail before patient information is disclosed.
+The assistant must not expose patient information without appropriate authorization.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+For each medication, capture the following information when available:
+
+- Medication name
+- Dose
+- Route
+- Frequency
+- Indication
+- Start date
+- End date or intended duration
+- Medication adherence
+- Documented side effects
+- Documented allergies or adverse reactions
+- Relevant laboratory values
+- Documented drug-interaction concerns
+If any field is missing, identify the missing information rather than inventing a value.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 13. General Knowledge Questions
+
+Examples of questions that can be answered from this knowledge base:
+
+- What is the purpose of the Clinical Review Assistant?
+- What information is considered during clinical review?
+- What are the steps in the clinical review workflow?
+- What information should be captured during medication review?
+- What should happen when medication dose information is missing?
+- What should happen when medication duration is missing?
+- How should documented allergies be handled?
+- When may pharmacist review be appropriate?
+- What are the available clinical review dispositions?
+- What is the difference between documented facts and clinical considerations?
+- What should the assistant do when the supplied context is insufficient?
+- What information should not be inferred during clinical review?
+These questions test retrieval and generation without requiring patient-specific information.","No, the assistant must not independently change, stop, start, or recommend a medication for a real patient.","No. The assistant must not independently change, stop, start, or recommend a medication for a real patient."
+Can the assistant independently start a new medication for this patient?,"Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+For each medication, capture the following information when available:
+
+- Medication name
+- Dose
+- Route
+- Frequency
+- Indication
+- Start date
+- End date or intended duration
+- Medication adherence
+- Documented side effects
+- Documented allergies or adverse reactions
+- Relevant laboratory values
+- Documented drug-interaction concerns
+If any field is missing, identify the missing information rather than inventing a value.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 5. Allergy and Medication-Safety Review
+
+Allergy review must use only documented allergy information.
+For each documented allergy, consider:
+
+- Allergen name
+- Documented reaction, if available
+- Date or history information, if available
+- Relationship to medications under review when explicitly documented
+The assistant must not infer an allergy or adverse reaction that is not documented.
+If a documented allergy creates a potential medication-safety concern, the case should be considered for pharmacist or clinician review according to the application's workflow.
+The assistant must not independently change, stop, start, or recommend a medication for a real patient.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+Subsection: Medication Dose
+
+Report the documented dose exactly as provided.
+Do not calculate, modify, increase, decrease, or recommend a dose unless the supplied knowledge base explicitly provides the relevant rule and the application's workflow authorizes such an action.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 9. Human Review and Escalation
+
+Additional human review may be appropriate when:
+
+- A medication-safety concern is documented.
+- A medication-allergy concern is documented.
+- Required medication information is missing.
+- Important clinical information is incomplete.
+- The knowledge base specifies a pharmacist-review condition.
+- The knowledge base specifies a clinician-review condition.
+- The case meets an urgent-review condition defined by the workflow.
+The assistant should clearly state when human review is required rather than implying that the assistant has completed the clinical decision.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 3. Standard Clinical Review Workflow
+
+A clinical review follows these steps:
+
+- Review the documented clinical history and available information.
+- Identify relevant symptoms, diagnoses, medications, allergies, laboratory values, and observations.
+- Review medication information for completeness and documented safety concerns.
+- Summarize findings using only documented information.
+- Identify missing or ambiguous information that may affect the review.
+- Distinguish documented facts from clinical considerations.
+- Identify whether additional pharmacist, clinician, or human review is required.
+- Record the appropriate review disposition.
+The assistant must not claim that an action was performed unless that action is explicitly documented.","No, the assistant cannot independently start a new medication for a patient. The assistant must not change, stop, start, or recommend a medication for a real patient without explicit documentation and authorization from the appropriate clinical workflow.",No. The assistant must not independently start or recommend a medication for a real patient.
+What should happen if a documented allergy creates a medication-safety concern?,"Document: Clinical Review Assistant — Knowledge Base
+
+Section: 5. Allergy and Medication-Safety Review
+
+Allergy review must use only documented allergy information.
+For each documented allergy, consider:
+
+- Allergen name
+- Documented reaction, if available
+- Date or history information, if available
+- Relationship to medications under review when explicitly documented
+The assistant must not infer an allergy or adverse reaction that is not documented.
+If a documented allergy creates a potential medication-safety concern, the case should be considered for pharmacist or clinician review according to the application's workflow.
+The assistant must not independently change, stop, start, or recommend a medication for a real patient.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+For each medication, capture the following information when available:
+
+- Medication name
+- Dose
+- Route
+- Frequency
+- Indication
+- Start date
+- End date or intended duration
+- Medication adherence
+- Documented side effects
+- Documented allergies or adverse reactions
+- Relevant laboratory values
+- Documented drug-interaction concerns
+If any field is missing, identify the missing information rather than inventing a value.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 9. Human Review and Escalation
+
+Additional human review may be appropriate when:
+
+- A medication-safety concern is documented.
+- A medication-allergy concern is documented.
+- Required medication information is missing.
+- Important clinical information is incomplete.
+- The knowledge base specifies a pharmacist-review condition.
+- The knowledge base specifies a clinician-review condition.
+- The case meets an urgent-review condition defined by the workflow.
+The assistant should clearly state when human review is required rather than implying that the assistant has completed the clinical decision.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+Subsection: Medication Dose
+
+Report the documented dose exactly as provided.
+Do not calculate, modify, increase, decrease, or recommend a dose unless the supplied knowledge base explicitly provides the relevant rule and the application's workflow authorizes such an action.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+Subsection: Medication Adherence
+
+If adherence information is documented, summarize it.
+If adherence is not documented, state that adherence information is unavailable.
+Do not infer adherence from medication history alone.","If a documented allergy creates a potential medication-safety concern, the case should be considered for pharmacist or clinician review according to the application's workflow.",The case should be considered for pharmacist or clinician review according to the application workflow.
+Should a medication allergy be inferred from an undocumented reaction?,"Document: Clinical Review Assistant — Knowledge Base
+
+Section: 5. Allergy and Medication-Safety Review
+
+Allergy review must use only documented allergy information.
+For each documented allergy, consider:
+
+- Allergen name
+- Documented reaction, if available
+- Date or history information, if available
+- Relationship to medications under review when explicitly documented
+The assistant must not infer an allergy or adverse reaction that is not documented.
+If a documented allergy creates a potential medication-safety concern, the case should be considered for pharmacist or clinician review according to the application's workflow.
+The assistant must not independently change, stop, start, or recommend a medication for a real patient.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+Subsection: Medication Adherence
+
+If adherence information is documented, summarize it.
+If adherence is not documented, state that adherence information is unavailable.
+Do not infer adherence from medication history alone.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+For each medication, capture the following information when available:
+
+- Medication name
+- Dose
+- Route
+- Frequency
+- Indication
+- Start date
+- End date or intended duration
+- Medication adherence
+- Documented side effects
+- Documented allergies or adverse reactions
+- Relevant laboratory values
+- Documented drug-interaction concerns
+If any field is missing, identify the missing information rather than inventing a value.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 12. Grounded Response Rules
+
+For knowledge-base questions:
+
+- Prefer information explicitly supported by the supplied knowledge base.
+- Do not invent clinical facts.
+- Do not invent patient information.
+- Do not claim that an action occurred unless documented.
+- Do not infer a medication dose or duration when it is missing.
+- Do not infer an allergy or adverse reaction.
+- Clearly identify uncertainty or missing information.
+- If the supplied context is insufficient, state that there is not enough information in the supplied context.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 6. Missing Information
+
+Potentially important missing information includes:
+
+- Medication dose
+- Medication duration
+- Medication frequency
+- Medication route
+- Allergy reaction
+- Relevant laboratory result
+- Medication adherence
+- Diagnosis
+- Symptom information
+- Treatment history
+When required information is missing:
+
+- Clearly identify what information is missing.
+- Do not invent or estimate the missing value.
+- Explain why the missing information may affect the review when supported by the knowledge base.
+- Refer for additional human review when the workflow requires it.","No, a medication allergy should not be inferred from an undocumented reaction. The assistant must only use documented allergy information and cannot make inferences about allergies or adverse reactions that are not explicitly documented.",No. Only documented allergy information should be used.
+Does the record document a penicillin reaction?,"Document: Clinical Review Assistant — Knowledge Base
+
+Section: 5. Allergy and Medication-Safety Review
+
+Allergy review must use only documented allergy information.
+For each documented allergy, consider:
+
+- Allergen name
+- Documented reaction, if available
+- Date or history information, if available
+- Relationship to medications under review when explicitly documented
+The assistant must not infer an allergy or adverse reaction that is not documented.
+If a documented allergy creates a potential medication-safety concern, the case should be considered for pharmacist or clinician review according to the application's workflow.
+The assistant must not independently change, stop, start, or recommend a medication for a real patient.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+For each medication, capture the following information when available:
+
+- Medication name
+- Dose
+- Route
+- Frequency
+- Indication
+- Start date
+- End date or intended duration
+- Medication adherence
+- Documented side effects
+- Documented allergies or adverse reactions
+- Relevant laboratory values
+- Documented drug-interaction concerns
+If any field is missing, identify the missing information rather than inventing a value.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 2. Scope of Clinical Review
+
+A clinical review may consider:
+
+- Symptoms and presenting concerns
+- Diagnoses and relevant medical history
+- Current and recently documented medications
+- Medication dosage
+- Route of administration
+- Frequency
+- Medication duration
+- Medication indication
+- Documented allergies
+- Documented adverse medication reactions
+- Relevant laboratory results
+- Relevant observations and vital signs
+- Medication adherence
+- Documented side effects
+- Documented drug-interaction concerns
+- Previous treatment information when available
+- Missing or incomplete clinical information
+The review should use only information documented in the supplied clinical context.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+Subsection: Medication Dose
+
+Report the documented dose exactly as provided.
+Do not calculate, modify, increase, decrease, or recommend a dose unless the supplied knowledge base explicitly provides the relevant rule and the application's workflow authorizes such an action.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 7. Clinical Review Dispositions
+
+Subsection: PHARMACIST_REVIEW
+
+Use when a medication-related concern requires pharmacist assessment, such as a documented medication-safety concern.",I do not have enough information in the supplied context.,Yes. It documents a rash reaction to penicillin.
+Should the assistant invent a medication dose when the record does not contain one?,"Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+Subsection: Medication Dose
+
+Report the documented dose exactly as provided.
+Do not calculate, modify, increase, decrease, or recommend a dose unless the supplied knowledge base explicitly provides the relevant rule and the application's workflow authorizes such an action.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 4. Medication Review
+
+For each medication, capture the following information when available:
+
+- Medication name
+- Dose
+- Route
+- Frequency
+- Indication
+- Start date
+- End date or intended duration
+- Medication adherence
+- Documented side effects
+- Documented allergies or adverse reactions
+- Relevant laboratory values
+- Documented drug-interaction concerns
+If any field is missing, identify the missing information rather than inventing a value.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 6. Missing Information
+
+Potentially important missing information includes:
+
+- Medication dose
+- Medication duration
+- Medication frequency
+- Medication route
+- Allergy reaction
+- Relevant laboratory result
+- Medication adherence
+- Diagnosis
+- Symptom information
+- Treatment history
+When required information is missing:
+
+- Clearly identify what information is missing.
+- Do not invent or estimate the missing value.
+- Explain why the missing information may affect the review when supported by the knowledge base.
+- Refer for additional human review when the workflow requires it.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 5. Allergy and Medication-Safety Review
+
+Allergy review must use only documented allergy information.
+For each documented allergy, consider:
+
+- Allergen name
+- Documented reaction, if available
+- Date or history information, if available
+- Relationship to medications under review when explicitly documented
+The assistant must not infer an allergy or adverse reaction that is not documented.
+If a documented allergy creates a potential medication-safety concern, the case should be considered for pharmacist or clinician review according to the application's workflow.
+The assistant must not independently change, stop, start, or recommend a medication for a real patient.
+
+Document: Clinical Review Assistant — Knowledge Base
+
+Section: 9. Human Review and Escalation
+
+Additional human review may be appropriate when:
+
+- A medication-safety concern is documented.
+- A medication-allergy concern is documented.
+- Required medication information is missing.
+- Important clinical information is incomplete.
+- The knowledge base specifies a pharmacist-review condition.
+- The knowledge base specifies a clinician-review condition.
+- The case meets an urgent-review condition defined by the workflow.
+The assistant should clearly state when human review is required rather than implying that the assistant has completed the clinical decision.","No, the assistant should not invent a medication dose when the record does not contain one. If the medication dose is missing, it should be clearly identified as such, and the assistant must not estimate or provide a value that is not documented.",No. It should not invent medication doses; it should state that the dose is not documented.
