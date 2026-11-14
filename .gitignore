@@ -9,6 +9,7 @@ __pycache__/
 
 # Temporary / raw report files
 reports/raw/
+artifacts/local-debug/
 
 # Keep generated evaluation reports and results
 # Do NOT ignore reports/*.csv or reports/*.json

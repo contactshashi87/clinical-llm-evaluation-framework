@@ -1,0 +1,4 @@
+host: "http://localhost:11434"
+model: "llama3.2:3b"
+embedding_model: "nomic-embed-text"
+questions_to_evaluate: 25

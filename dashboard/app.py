@@ -3,7 +3,7 @@ from pathlib import Path
 import pandas as pd
 
 ROOT=Path(__file__).resolve().parents[1]
-REPORTS=ROOT/'reports'
+REPORTS=ROOT/'reports'/'chatbot_app'
 st.set_page_config(page_title='Clinical LLM Evaluation Dashboard', layout='wide')
 st.title('Clinical Review Assistant — LLM Evaluation Dashboard')
 st.caption('AI Quality Engineering evaluation framework')
@@ -15,7 +15,7 @@ def load(name):
 e=load('evaluation_results.csv'); s=load('safety_results.csv'); r=load('regression_results.csv'); d=load('defect_log.csv')
 
 if e is None:
-    st.warning('No execution results found. Run `python -m src.run_all` first.')
+    st.warning('No chatbot-app results found. Run `python -m src.chatbot_app.run_all` first.')
     st.stop()
 
 c1,c2,c3,c4=st.columns(4)

@@ -1,0 +1,1 @@
+"""Evaluation workflow for the local Ollama model and RAG pipeline."""

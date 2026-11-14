@@ -2,7 +2,8 @@ from pathlib import Path
 import csv
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / 'data'
+DATA = ROOT / 'data' / 'shared'
+DATA.mkdir(parents=True, exist_ok=True)
 
 rows = []
 
